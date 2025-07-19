@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | LearnAIHub</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom right, #03111c, #740404);
+            color: white;
+        }
+
+        /* NAVBAR */
+        .main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            flex-wrap: wrap;
+        }
+
+        .main img {
+            width: 160px;
+        }
+
+        ul {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        li {
+            background-color: aliceblue;
+            border-radius: 40px;
+            width: 120px;
+            text-align: center;
+            padding: 10px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        li:hover {
+            background: linear-gradient(to bottom right, #03111c, #740404);
+        }
+
+        .a {
+            text-decoration: none;
+            color: #03111c;
+            transition: 0.3s;
+        }
+
+        li:hover .a {
+            color: aliceblue;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            border-radius: 2px;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 30px;
+            background: linear-gradient(to bottom right, #03111c, #740404);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 10px #00000080;
+            z-index: 999;
+        }
+
+        .mobile-menu a {
+            color: #03111c;
+            text-decoration: none;
+            color: white;
+            padding: 15px 20px;
+            display: block;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .mobile-menu a:hover {
+            background: linear-gradient(to bottom right, #03111c, #740404);
+            color: white;
+        }
+
+        /* BLOG SECTION */
+        .blog-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .blog-card {
+            background-color: #ffffff10;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 10px #00000060;
+            transition: transform 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .blog-content {
+            padding: 20px;
+        }
+
+        .blog-content h2 {
+            margin: 0 0 10px;
+            font-size: 20px;
+            color: #F2AA4C;
+        }
+
+        .blog-content p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #00000080;
+            margin-top: 40px;
+            color: white;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            ul {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu.active {
+                display: flex;
+            }
+
+            .main {
+                padding: 20px;
+            }
+
+            li {
+                width: auto;
+                padding: 10px 20px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div class="main">
+        <img src="logo.png" alt="LearnAIHub Logo" />
+
+        <ul>
+            <li><a href="Home.html" class="a">Home</a></li>
+            <li><a href="About.html" class="a">About</a></li>
+            <li><a href="Blog.html" class="a">Blog</a></li>
+            <li><a href="Contact.html" class="a">Contact</a></li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Blog.html">Blog</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- BLOG SECTION -->
+    <section class="blog-section">
+        <div class="blog-card">
+            <img src="1 (1).jpg" alt="AI Image 1" />
+            <div class="blog-content">
+                <h2>What is Artificial Intelligence?</h2>
+                <p>Explore the basics of AI, how it works, and where it is used in everyday life—from smartphones to
+                    self-driving cars.</p>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="7.jpg" alt="AI Image 2" />
+            <div class="blog-content">
+                <h2>Types of AI</h2>
+                <p>Learn about the four main types of AI: Reactive Machines, Limited Memory, Theory of Mind, and
+                    Self-Aware AI.</p>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <img src="8.jpg" alt="AI Image 3" />
+            <div class="blog-content">
+                <h2>Future of AI</h2>
+                <p>Discover what the future of AI may look like in healthcare, education, finance, and even creative
+                    industries.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 LearnAIHub. All rights reserved.
+    </footer>
+
+    <!-- SCRIPT -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("mobileMenu");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>

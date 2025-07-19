@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - LearnAIHub</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom right, #03111c, #740404);
+            color: white;
+        }
+
+        /* ==== NAVBAR ==== */
+        .main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+
+        .main img {
+            width: 160px;
+        }
+
+        ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        li {
+            list-style: none;
+            background-color: aliceblue;
+            border-radius: 40px;
+            width: 140px;
+            text-align: center;
+            padding: 10px;
+            font-size: large;
+            transition: 0.3s;
+        }
+
+        li:hover {
+            background: linear-gradient(to bottom right, #03111c, #740404);
+        }
+
+        .a {
+            text-decoration: none;
+            color: #03111c;
+            transition: 0.3s;
+        }
+
+        li:hover .a {
+            color: aliceblue;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            border-radius: 2px;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 80px;
+            right: 30px;
+            background: linear-gradient(to bottom right, #03111c, #740404);
+            right: 20px;
+            border-radius: 20px;
+            padding: 20px;
+            z-index: 10;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .mobile-menu a {
+            color: #03111c;
+            color: white;
+            text-decoration: none;
+            padding: 10px 0;
+            font-weight: bold;
+        }
+
+        /* ==== SECTIONS ==== */
+        .section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .section img {
+            max-width: 100%;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        /* ==== MEDIA QUERY ==== */
+        @media screen and (max-width: 768px) {
+            ul {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu.active {
+                display: flex;
+            }
+
+            .main {
+                padding: 20px;
+            }
+
+            .section h2 {
+                font-size: 1.6rem;
+            }
+
+            .section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==== NAVBAR ==== -->
+    <div class="main">
+        <img src="logo.png" alt="LearnAIHub Logo" />
+
+
+        <ul>
+            <li><a href="Home.html" class="a">Home</a></li>
+            <li><a href="About.html" class="a">About</a></li>
+            <li><a href="Blog.html" class="a">Blog</a></li>
+            <li><a href="Contact.html" class="a">Contact</a></li>
+        </ul>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Blog.html">Blog</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- ==== SECTION: INTRO ==== -->
+    <div class="section">
+        <h2>Welcome to LearnAIHub</h2>
+        <p>At LearnAIHub, we are passionate about bringing the world of Artificial Intelligence closer to everyone —
+            from curious beginners to tech professionals.</p>
+        <img src="6.jpg" alt="Artificial Intelligence Concept Image" />
+    </div>
+
+    <!-- ==== SECTION: MISSION ==== -->
+    <div class="section">
+        <h2>Our Mission</h2>
+        <p>We aim to simplify complex AI topics and provide easy-to-understand tutorials, latest news, and engaging blog
+            posts about the future of technology.</p>
+    </div>
+
+    <!-- ==== SECTION: WHY US ==== -->
+    <div class="section">
+        <h2>Why Choose LearnAIHub?</h2>
+        <p>We create blogs, resources, and explainers that are readable, reliable, and relevant to today’s AI world.
+            Whether you're a student or developer — there's something for you here.</p>
+        <img src="2 (1).jpg" alt="Why LearnAIHub Graphic" />
+    </div>
+
+    <!-- ==== SECTION: CREATOR ==== -->
+    <div class="section">
+        <h2>About the Creator</h2>
+        <p>This site is created by <strong>Muhammed Sufiyan</strong>, a passionate tech learner and AI enthusiast from
+            Pakistan. His mission is to make AI knowledge free and accessible for all.</p>
+    </div>
+
+    <!-- ==== SCRIPT ==== -->
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
